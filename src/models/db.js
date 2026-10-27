@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename);
 // conexao com o banco
 const conexao = new Database(path.join(__dirname, "..", "..", "minhaBiblioteca.db"));
 
+conexao.pragma('foreign_keys = ON');
+
 // criando uma table usuarios
 conexao.exec(`
     CREATE TABLE IF NOT EXISTS usuarios (

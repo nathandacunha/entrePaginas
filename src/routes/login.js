@@ -12,7 +12,6 @@ const regrasLogin = [
         .trim()
         .customSanitizer(valor => valor.replace(/\D/g, ''))
         .notEmpty().withMessage('CPF é obrigatório'),
-    
     body('senha')
         .notEmpty().withMessage('A senha é obrigatoria'),
 ];
